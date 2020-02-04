@@ -1,0 +1,14 @@
+label
+{
+    color: white;
+}
+
+.form-control
+{
+    width: 100% !important;
+}
+
+.error-label
+{
+    color: red;
+}

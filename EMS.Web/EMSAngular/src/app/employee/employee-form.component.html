@@ -1,0 +1,65 @@
+<div class="=row">
+    <div class="col-md-5"></div>
+    <div class="col-md-4"><h2>{{employeeData.id ==0 ? "Add New Employee" : "Update Employee Details"}}</h2></div>
+    <div class="col-md-3"></div>
+  </div>
+<br><br><br><br>
+<div class="=row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+        <form #heroForm="ngForm">
+            <div class="form-group">
+                <label class="control-label col-sm-2">First Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" #firstName="ngModel" required class="form-control" id="firstName" name="firstName" [ngModel]="employeeData?.firstName" (ngModelChange)="employeeData.firstName = $event">
+                    <div [hidden]="firstName.valid || firstName.pristine" class="alert alert-danger">
+                        First Name is required
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Last Name:</label>
+                <div class="col-sm-10">          
+                    <input type="text" #lastName="ngModel" required class="form-control" name="lastName" id="lastName" [ngModel]="employeeData?.lastName" (ngModelChange)="employeeData.lastName = $event" ng-maxlength="5">
+                    <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+                        Last Name is required
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="form-group" ng-form-name="myForm">
+                <label class="control-label col-sm-2">Department:</label>
+                <div class="col-sm-10">  
+                    <select required #department="ngModel" id="department" name="department" class="form-control" [ngModel]="employeeData?.department" (ngModelChange)="employeeData.department = $event">
+                        <option *ngFor="let key of keys" [ngValue]="key" [label]="departments[key]"></option>
+                    </select>       
+                    <div [hidden]="department.valid || department.pristine" class="alert alert-danger">
+                        Department is required
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Salary:</label>
+                <div class="col-sm-10">          
+                    <input type="number" #salary="ngModel" required class="form-control" id="salary" name="salary" [ngModel]="employeeData?.salary" (ngModelChange)="employeeData.salary = $event" maxlength="6">
+                    <div [hidden]="salary.valid || salary.pristine" class="alert alert-danger">
+                        Salary is required
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br><br>
+        <div class="form-group">        
+            <div class="col-sm-offset-6 col-sm-6">
+                <button [disabled]="!heroForm.form.valid" type="submit" class="btn btn-primary" (click)="updateEmployee()">{{employeeData.id==0 ? "Add Employee" : "Update Employee"}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+<div>

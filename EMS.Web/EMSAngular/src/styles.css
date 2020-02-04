@@ -1,0 +1,36 @@
+body
+{
+    background-color:#081436;
+}
+
+h2
+{
+    color: #EC4540;
+}
+
+th, td
+{
+    color:white;
+}
+
+h3
+{
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box {
+    display: flex;
+    align-items:center;
+ }
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   color: white !important; 
+   background-color:#081436 !important ;
+ }
+
+ .btn-primary
+ {
+     background-color: #EC4540;
+ }
