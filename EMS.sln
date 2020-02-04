@@ -1,17 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.API", "ESM.API\EMS.API.csproj", "{B54061E4-7FD8-4AB7-AF15-FC977C374C39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.API", "EMS.API\EMS.API.csproj", "{B54061E4-7FD8-4AB7-AF15-FC977C374C39}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.BL", "ESM.BL\EMS.BL.csproj", "{9D1788B8-ED5E-46CB-89F1-4CD02D1A1405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.BL", "EMS.BL\EMS.BL.csproj", "{9D1788B8-ED5E-46CB-89F1-4CD02D1A1405}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.DL", "ESM.DL\EMS.DL.csproj", "{3915CCD8-E669-41D3-9656-51814824676A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.DL", "EMS.DL\EMS.DL.csproj", "{3915CCD8-E669-41D3-9656-51814824676A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{F457DBC4-780B-4A94-8906-E03FC2D1AF61}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeDataTests", "UnitTest\EmployeeDataTests\EmployeeDataTests.csproj", "{A15A58B7-5EA0-408F-82EC-201ABE7BF57A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS.Common", "EMS.Common\EMS.Common\EMS.Common.csproj", "{D9F6EAFB-9629-4ECF-9578-ACAB5C48F1A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{A15A58B7-5EA0-408F-82EC-201ABE7BF57A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A15A58B7-5EA0-408F-82EC-201ABE7BF57A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A15A58B7-5EA0-408F-82EC-201ABE7BF57A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F6EAFB-9629-4ECF-9578-ACAB5C48F1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F6EAFB-9629-4ECF-9578-ACAB5C48F1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F6EAFB-9629-4ECF-9578-ACAB5C48F1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F6EAFB-9629-4ECF-9578-ACAB5C48F1A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

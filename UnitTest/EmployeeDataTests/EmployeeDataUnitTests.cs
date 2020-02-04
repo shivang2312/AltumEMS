@@ -1,20 +1,20 @@
-using EMS.DL;
-using ESM.BL;
-using ESM.DL;
+using EMS.BL;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
+using EMS.Common;
+using Employee = ESM.BL.Employee;
 
 namespace EmployeeDataTests
 {
     public class EmployeeDataUnitTests
     {
-        private IEmployeeData employeeData;
+        private IEmployeeOperations employeeOperations;
 
         [SetUp]
         public void Setup()
         {
-            employeeData = new EmployeeData();
+            employeeOperations = new EmployeeOperations();
         }
 
  
@@ -33,7 +33,7 @@ namespace EmployeeDataTests
             List<Employee> result = new List<Employee>();
 
             //Act
-            result = employeeData.GetAllEmployees().ToList();
+            result = employeeOperations.GetAllEmployees().ToList();
 
             //Assert
             Assert.AreEqual(expected[0].Id,result[0].Id);
@@ -52,7 +52,7 @@ namespace EmployeeDataTests
             Employee result = new Employee();
 
             //Act
-            result = employeeData.GetEmployeeById(id);
+            result = employeeOperations.GetEmployeeById(id);
 
             //Assert
             Assert.AreEqual(expected.Id, result.Id);
@@ -68,7 +68,7 @@ namespace EmployeeDataTests
             //Arrange
 
             //Act
-            bool result = employeeData.DeleteEmployee(id);
+            bool result = employeeOperations.DeleteEmployee(id);
 
             //Assert
             Assert.IsTrue(result);
@@ -88,7 +88,7 @@ namespace EmployeeDataTests
             Employee result = new Employee();
 
             //Act
-            result = employeeData.AddEmployee(expected);
+            result = employeeOperations.AddEmployee(expected);
 
             //Assert
             Assert.AreEqual(5, result.Id);
@@ -113,7 +113,7 @@ namespace EmployeeDataTests
             Employee result = new Employee();
 
             //Act
-            result = employeeData.UpdateEmployee(expected);
+            result = employeeOperations.UpdateEmployee(expected);
 
             //Assert
             Assert.AreEqual(5, result.Id);
